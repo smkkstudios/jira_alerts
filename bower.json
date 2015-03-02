@@ -1,0 +1,24 @@
+{
+  "name": "jira_alerts",
+  "version": "0.0.0",
+  "authors": [
+    "element4git <josh@smkkstudios.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.14",
+    "angular-route": "~1.3.14",
+    "jquery": "~2.1.3"
+  }
+}
