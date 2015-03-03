@@ -26,7 +26,7 @@ var jsFilesToInject = [
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
   'js/dist/**/*.js',
-  'js/ember.js',
+  'js/ember*.*',
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
 

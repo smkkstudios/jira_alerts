@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 	      packageSpecific: {
 	        'ember': {
 	          files: [
-	            "ember.js",
+	            "ember.debug.js",
 	            "ember-template-compiler.js"
 	          ]
 	        }
