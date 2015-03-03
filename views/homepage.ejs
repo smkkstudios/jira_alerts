@@ -10,7 +10,7 @@
       <li>
         <div>
           {{item.user.displayName}}
-          <a href={{item.issue.self}}>JIRA ISSUE</a>
+          <a {{bind-attr href=item.issue.self}}></a>
         </div>
       </li>
     {{/each}}
