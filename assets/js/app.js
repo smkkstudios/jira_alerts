@@ -1,16 +1,13 @@
-angular.module('jiramvc', ['ngRoute'])
-	.config(function ($routeProvider) {
-		'use strict';
+App = Ember.Application.create();
 
-		var routeConfig = {
-			controller: 'JiraCtrl',
-			templateUrl: 'jiramvc-index.html'
-		};
-		$routeProvider
-			.when('/', routeConfig)
-			.when('/:status', routeConfig)
-			.otherwise({
-				redirectTo: '/'
-		});
+App.Router.map(function() {
+  // put your routes here
+});
 
-	});
+App.IndexRoute = Ember.Route.extend({
+  model: function() {
+    return Ember.$.getJSON('/jiraalert').then(function(data){
+    	return data;
+    })
+  }
+});

@@ -1,11 +1,13 @@
-<!-- Default home page -->
-<link type="text/css" href='http://sailsjs.org/styles/fonts.css' rel='stylesheet'/>
-<h1> Welcome and lets get alerted</h1>
+ <script type="text/x-handlebars">
+    <h2>Welcome to Ember.js</h2>
 
-<div ng-app="jiramvc">
-    <ng-view />
-    <script type="text/ng-template" id="jiramvc-index.html">
-        <div> hmmmmmm homie</div>
-        {{welcome}}
-    </script>
-</div>
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" id="index">
+    <ul>
+    {{#each item in model}}
+      <li>{{item}}</li>
+    {{/each}}
+    </ul>
+  </script>
