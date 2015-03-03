@@ -15,9 +15,9 @@ module.exports = {
   update: function (req, res) {
     var socket = req.socket;
     var io = sails.io;
-    JiraAlert.create({}).exec(function(err,post){
+    JiraAlert.create(req.body).exec(function(err,post){
       if(err){
-        return res.error(err);
+        return res.send(err);
       }
       console.log('model created beyo');
     })
