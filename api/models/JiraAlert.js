@@ -21,7 +21,7 @@ module.exports = {
     },
     
     timestamp: {
-      type: 'number',
+      type: 'string',
       required: true
     },
     user: {
