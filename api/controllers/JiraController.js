@@ -15,7 +15,7 @@ module.exports = {
   update: function (req, res) {
     var socket = req.socket;
     var io = sails.io;
-    var Test = test.create({comment:'this is a working model'}).exec(function(err,post){
+    var Test = Test.create({comment:'this is a working model'}).exec(function(err,post){
       if(err){
         console.log(err);
       }
