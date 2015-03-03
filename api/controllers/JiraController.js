@@ -17,7 +17,7 @@ module.exports = {
     var io = sails.io;
     JiraAlert.create(req.body).exec(function(err,post){
       if(err){
-        return res.send(err);
+        console.log(err);
       }
       console.log('model created beyo');
     })
