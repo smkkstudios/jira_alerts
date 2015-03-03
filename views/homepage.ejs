@@ -7,7 +7,12 @@
   <script type="text/x-handlebars" id="index">
     <ul>
     {{#each item in model}}
-      <li>{{item.user.displayName}}</li>
+      <li>
+        <div>
+          {{item.user.displayName}}
+          <a href="{{item.issue.self}}">JIRA ISSUE</a>
+        </div>
+      </li>
     {{/each}}
     </ul>
   </script>
