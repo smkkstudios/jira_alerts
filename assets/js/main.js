@@ -1,3 +1,3 @@
-io.socket.on('messageName',function(obj){
-    console.log('you fucking now it: ',obj)
+io.socket.on('jiraAlert',function(obj){
+    console.log('you fucking know it: ',obj)
 })

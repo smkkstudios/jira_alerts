@@ -13,10 +13,16 @@ module.exports = {
    * `JiraController.update()`
    */
   update: function (req, res) {
-        var socket = req.socket;
-    	var io = sails.io;
-	io.sockets.emit('messageName', {thisIs: req.body});
-        return res.send('it has been done')
+    var socket = req.socket;
+    var io = sails.io;
+    JiraAlert.create({}).exec(function(err,post){
+      if(err){
+        return res.error(err);
+      }
+      console.log('model created beyo');
+    })
+	  io.sockets.emit('jiraAlert', {thisIs: req.body});
+    return res.send('it has been done')
   }
 };
 
