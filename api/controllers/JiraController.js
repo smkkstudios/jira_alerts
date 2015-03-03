@@ -15,13 +15,10 @@ module.exports = {
   update: function (req, res) {
     var socket = req.socket;
     var io = sails.io;
-    var tester = Test.create({comment:'this is a working model'}).exec(function(err,post){
-      if(err){
-        console.log(err);
-      }
-      console.log('model created beyo: ',tester);
+    JiraAlert.create(req.body).exec(function(err,post){
+      console.log(err);
     })
-	  io.sockets.emit('jiraAlert', {thisIs: req.body});
+	  io.sockets.emit('jiraAlert', {jiraUpdate: req.body});
     return res.send('it has been done')
   }
 };
