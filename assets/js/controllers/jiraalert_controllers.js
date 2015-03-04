@@ -4,7 +4,9 @@
 	App.JiraalertController = Ember.ObjectController.extend({
 		actions: {
 			updateModel:function(){
-				this.model = '';
+				return Ember.$.getJSON('/jiraaler').then(function(data){
+			    	return data;
+			    })
 			}
 		}
 	});
