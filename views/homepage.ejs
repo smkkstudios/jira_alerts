@@ -6,11 +6,11 @@
 
   <script type="text/x-handlebars" id="index">
     <ul>
-    {{#each}}
+    {{#each alert in model}}
       <li>
         <div>
-          {{user.displayName}}
-          <a {{bind-attr href=issue.self}}>{{issue.fields.summary}}</a>
+          {{alert.user.displayName}}
+          <a {{bind-attr href=issue.self}}>{{alert.issue.fields.summary}}</a>
         </div>
       </li>
     {{/each}}
