@@ -27,6 +27,7 @@ var jsFilesToInject = [
   'js/dependencies/sails.io.js',
   'js/dist/**/*.js',
   'js/ember.debug.js',
+  'js/ember*.js',
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
 
