@@ -4,7 +4,9 @@
 	App.JiraalertController = Ember.ObjectController.extend({
 		actions: {
 			updateModel:function(){
-				return {apple:'true'}
+				var alert = this.get('model');
+					alert.set('user', {displayName:'meho dodo'});
+					alert.save();
 			}
 		}
 	});
