@@ -1,2 +1,2 @@
 window.App = Ember.Application.create();
-App.ApplicationStore = DS.Store.extend();
+App.Store = DS.Store.extend();
