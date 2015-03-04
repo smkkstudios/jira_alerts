@@ -2,6 +2,10 @@
 (function () {
 	'use strict';
 	App.JiraalertController = Ember.ObjectController.extend({
-		actions: {}
+		actions: {
+			updateModel:function(){
+				this.model = '';
+			}
+		}
 	});
 })();
